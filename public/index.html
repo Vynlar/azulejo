@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tile Game</title>
+    <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+
+    <style>
+        canvas {
+            border: 1px solid black;
+            image-rendering: pixelated;
+        }
+
+        .canvas-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+<body>
+    <div class="canvas-wrapper">
+        <div>
+            <h1>The tile you received</h1>
+            <canvas id="tileCanvas"></canvas>
+        </div>
+        <div>
+            <h1>Re-create the above tile</h1>
+            <canvas id="drawingCanvas"></canvas>
+        </div>
+    </div>
+    <span id='remaining-images'></span>
+    <button onclick="submitTile()">Submit Drawing</button>
+
+    <script src="tiled-art.ui.js"></script>
+</body>
+</html>
