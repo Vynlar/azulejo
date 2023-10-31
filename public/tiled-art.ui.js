@@ -84,10 +84,10 @@ function draw(event) {
   drawingCtx.lineCap = 'round';
   drawingCtx.strokeStyle = brushColor; // Set the brush color
 
-  drawingCtx.lineTo(event.clientX - drawingCanvas.offsetLeft, event.clientY - drawingCanvas.offsetTop);
+  drawingCtx.lineTo(event.pageX - drawingCanvas.offsetLeft, event.pageY - drawingCanvas.offsetTop);
   drawingCtx.stroke();
   drawingCtx.beginPath();
-  drawingCtx.moveTo(event.clientX - drawingCanvas.offsetLeft, event.clientY - drawingCanvas.offsetTop);
+  drawingCtx.moveTo(event.pageX - drawingCanvas.offsetLeft, event.pageY - drawingCanvas.offsetTop);
 }
 
 // Configuration
